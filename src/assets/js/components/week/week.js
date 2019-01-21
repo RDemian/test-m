@@ -11,6 +11,10 @@ import { isNull } from 'util';
 
 export default function () {
 
+    if (!Modernizr.contextmenu) {
+        alert('Не поддерживает contextmenu!');
+    }
+
     var weekList = document.querySelector('.week__list');
     var weekItems = document.querySelectorAll('.week__item');
     var startContainer = null; // строка списка откуда забрали элемент
