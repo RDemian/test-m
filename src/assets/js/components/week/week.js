@@ -1,6 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
+import '../../lib/modernizr-custom';
 import { isNull } from 'util';
 
 /**
@@ -10,9 +11,6 @@ import { isNull } from 'util';
 
 export default function () {
 
-
-    //console.log('week');
-    
     var weekList = document.querySelector('.week__list');
     var weekItems = document.querySelectorAll('.week__item');
     var startContainer = null; // строка списка откуда забрали элемент
@@ -44,10 +42,12 @@ export default function () {
     
     function onDragStart(ev) {
         ev.dataTransfer.effectAllowed='move';
-        ev.dataTransfer.setData('text/plain', ev.target);  
         startContainer = getParentElement(ev.target, 'week__item');
         moveElement = getParentElement(ev.target, 'week-card');
         moveElement.classList.add('drag-element');
+        if (navigator.userAgent.search(/Firefox/) > 0) {
+            ev.dataTransfer.setData('text/plain', 'ev.target');  
+        }
         return true;
     }
     function onDragDrop(ev) {
@@ -82,6 +82,7 @@ export default function () {
             moveElement.classList.remove('drag-element');
         }
     }
+
     // Контекстное меню мозила
     function contextMenuFF() {
         // Создаем меню:
@@ -107,18 +108,20 @@ export default function () {
     }
 
     // Контекстное меню
-    /*
-    // отменяем вызов стандартного контекстного меню
-    document.oncontextmenu = function() {return false;};
+    
     // обработчик вызова контекстного меню
     $(weekList).mouseup(function(ev) {
-        // Удаляем предыдущее вызванное контекстное меню:
-        $('.context-menu').remove();
-        
-        // Проверяем нажата ли правая кнопка мыши:
-        if (event.which === 3)  {
-            contextMenu(ev);
-        }    
+        if (!Modernizr.contextmenu) {
+            // отменяем вызов стандартного контекстного меню
+            document.oncontextmenu = function() {return false;};
+            // Удаляем предыдущее вызванное контекстное меню:
+            $('.context-menu').remove();
+            
+            // Проверяем нажата ли правая кнопка мыши:
+            if (event.which === 3)  {
+                contextMenu(ev);
+            }
+        }
     });
 
     //Формирование меню
@@ -166,5 +169,5 @@ export default function () {
         contextMenu.show();        
         
     }
-    */
+    
 };

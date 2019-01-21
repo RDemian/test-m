@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+<body>
+
+<div class="grid-container fluid">
+  <div class="grid-x grid-padding-x">
+      <div class="week" contextmenu = "week-menu">
+          <ul class="week__list">
+              <li class="week__item">
+                  <div class="week-card" id="card-0" draggable="true">
+                      <div class="week-card__title"> <!-- заполняется из data/week.json -->
+                          понедельник 
+                      </div>
+                  </div>        </li>
+              <li class="week__item">
+                  <div class="week-card" id="card-1" draggable="true">
+                      <div class="week-card__title"> <!-- заполняется из data/week.json -->
+                          вторник 
+                      </div>
+                  </div>        </li>
+              <li class="week__item">
+                  <div class="week-card" id="card-2" draggable="true">
+                      <div class="week-card__title"> <!-- заполняется из data/week.json -->
+                          среда 
+                      </div>
+                  </div>        </li>
+              <li class="week__item">
+                  <div class="week-card" id="card-3" draggable="true">
+                      <div class="week-card__title"> <!-- заполняется из data/week.json -->
+                          четверг 
+                      </div>
+                  </div>        </li>
+              <li class="week__item">
+                  <div class="week-card" id="card-4" draggable="true">
+                      <div class="week-card__title"> <!-- заполняется из data/week.json -->
+                          пятница 
+                      </div>
+                  </div>        </li>
+              <li class="week__item">
+                  <div class="week-card" id="card-5" draggable="true">
+                      <div class="week-card__title"> <!-- заполняется из data/week.json -->
+                          суббота 
+                      </div>
+                  </div>        </li>
+              <li class="week__item">
+                  <div class="week-card" id="card-6" draggable="true">
+                      <div class="week-card__title"> <!-- заполняется из data/week.json -->
+                          воскресение 
+                      </div>
+                  </div>        </li>
+          </ul>
+          <menu class="week-menu" type = "context" id = "week-menu">
+              <!-- <menuitem label="проверка"></menuitem> -->
+          </menu>
+      </div>  </div>
+</div>
+
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

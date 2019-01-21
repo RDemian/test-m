@@ -2,6 +2,7 @@ import $ from 'jquery';
 import whatInput from 'what-input';
 import week from './components/week/week';
 
+
 window.$ = $;
 
 //import Foundation from 'foundation-sites';
