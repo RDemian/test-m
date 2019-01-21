@@ -3,9 +3,6 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-@import 'node_modules/slick-carousel/slick/slick.scss';
-
-//@include slick;
 
 // Global styles
 @include foundation-global-styles;
@@ -65,3 +62,8 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+//week style
+@import 'global/common.scss';
+@import 'components/week/week.scss';
+@import 'components/week/week-card.scss';

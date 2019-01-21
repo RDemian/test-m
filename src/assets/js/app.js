@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
-import slick from 'slick-carousel';
-import accordion from './components/accordion/accordion';
+import week from './components/week/week';
+
 window.$ = $;
 
 //import Foundation from 'foundation-sites';
@@ -11,13 +11,7 @@ import './lib/foundation-explicit-pieces';
 
 
 $(document).foundation();
-//console.log(accordion);
-accordion();
-//$( document ).ready( accordion );
-//$(accordion);
 
-$('.js-slick-carousel').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  })
+$(document).ready(week);// инициализация модуля week
+
+

@@ -1,0 +1,20 @@
+.week-card {
+    @include flex;
+    @include flex-align(center, middle);
+    flex: 1 1 auto;
+    background: linear-gradient(270deg, $primary-color, $success-color);
+    background-size: 400% 400%;
+    color: $primary-color;
+    cursor: pointer;
+}
+
+.week-card__title {
+    font-size: 2em;
+    line-height: 1;
+    text-align: center;
+}
+
+.drag-element {
+    opacity: 0.3;
+    color: #fff;
+}

@@ -1,0 +1,50 @@
+body {
+    overflow: hidden;
+}
+
+@keyframes changeColor {   
+    0% {
+        background-position: 0% 50%;
+        color: $white;
+    }
+    50% {
+        background-position: 100% 50%;
+        color: $alert-color;
+    }
+    100% {
+        background-position: 0% 50%;
+        color: $white;
+    }
+}
+
+.color-animation {
+    animation: changeColor 1s linear infinite;
+}
+
+.context-menu {
+    position: absolute;
+    background-color: $warning-color;
+    color: $black;
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    &__card {
+        position: relative;
+        padding: 5px 25px;
+        cursor: pointer;
+        
+        &_mark{
+            background-color: $alert-color;
+        }
+        
+    }
+
+    &__title {
+        font-size: 1.5em;
+        line-height: 1;
+    }
+}
