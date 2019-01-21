@@ -23616,6 +23616,10 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
+  if (!Modernizr.contextmenu) {
+    alert('Не поддерживает contextmenu!');
+  }
+
   var weekList = document.querySelector('.week__list');
   var weekItems = document.querySelectorAll('.week__item');
   var startContainer = null; // строка списка откуда забрали элемент
