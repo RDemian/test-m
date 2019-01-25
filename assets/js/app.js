@@ -23618,6 +23618,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   if (!Modernizr.contextmenu) {
     alert('Не поддерживает contextmenu!');
+  } else {
+    contextMenuFF();
   }
 
   var weekList = document.querySelector('.week__list');
