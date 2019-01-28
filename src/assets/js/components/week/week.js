@@ -13,6 +13,8 @@ export default function () {
 
     if (!Modernizr.contextmenu) {
         alert('Не поддерживает contextmenu!');
+    } else {
+        contextMenuFF();
     }
 
     var weekList = document.querySelector('.week__list');
