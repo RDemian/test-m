@@ -6362,7 +6362,10 @@ html.is-reveal-open {
           animation-delay: 700ms !important; }
 
 body {
-  overflow: hidden; }
+  overflow-y: hidden;
+  overflow-x: scroll;
+  min-width: 320px;
+  max-width: 1920px; }
 
 @-webkit-keyframes changeColor {
   0% {
